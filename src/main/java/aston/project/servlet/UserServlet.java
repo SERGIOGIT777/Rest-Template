@@ -43,7 +43,7 @@ public class UserServlet extends HttpServlet {
     }
 
     @Override
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         setJsonHeader(resp);
 
         String responseAnswer = "";
@@ -72,7 +72,7 @@ public class UserServlet extends HttpServlet {
     }
 
     @Override
-    public void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         setJsonHeader(resp);
         String responseAnswer = "";
         try {
@@ -93,7 +93,7 @@ public class UserServlet extends HttpServlet {
     }
 
     @Override
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         setJsonHeader(resp);
         String json = getJson(req);
 
@@ -113,7 +113,7 @@ public class UserServlet extends HttpServlet {
     }
 
     @Override
-    public void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         setJsonHeader(resp);
         String json = getJson(req);
 
