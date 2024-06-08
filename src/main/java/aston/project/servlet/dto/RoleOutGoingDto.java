@@ -1,13 +1,13 @@
-package aston.project.dto;
+package aston.project.servlet.dto;
 
-public class DepartmentUpdateDto {
+public class RoleOutGoingDto {
     private Long id;
     private String name;
 
-    public DepartmentUpdateDto() {
+    public RoleOutGoingDto() {
     }
 
-    public DepartmentUpdateDto(Long id, String name) {
+    public RoleOutGoingDto(Long id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -19,5 +19,4 @@ public class DepartmentUpdateDto {
     public String getName() {
         return name;
     }
-
 }

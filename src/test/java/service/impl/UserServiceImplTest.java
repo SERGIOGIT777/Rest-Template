@@ -1,9 +1,9 @@
 package service.impl;
 
-import aston.project.dto.RoleUpdateDto;
-import aston.project.dto.UserIncomingDto;
-import aston.project.dto.UserOutGoingDto;
-import aston.project.dto.UserUpdateDto;
+import aston.project.servlet.dto.RoleUpdateDto;
+import aston.project.servlet.dto.UserIncomingDto;
+import aston.project.servlet.dto.UserOutGoingDto;
+import aston.project.servlet.dto.UserUpdateDto;
 import aston.project.exception.NotFoundException;
 import aston.project.model.Role;
 import aston.project.model.User;

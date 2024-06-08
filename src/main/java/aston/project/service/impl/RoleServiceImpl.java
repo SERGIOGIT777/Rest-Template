@@ -1,13 +1,13 @@
 package aston.project.service.impl;
 
-import aston.project.dto.RoleIncomingDto;
-import aston.project.dto.RoleOutGoingDto;
-import aston.project.dto.RoleUpdateDto;
-import aston.project.mapper.RoleDtoMapper;
+import aston.project.servlet.dto.RoleIncomingDto;
+import aston.project.servlet.dto.RoleOutGoingDto;
+import aston.project.servlet.dto.RoleUpdateDto;
+import aston.project.servlet.mapper.RoleDtoMapper;
 import aston.project.model.Role;
 import aston.project.service.RoleService;
 import aston.project.exception.NotFoundException;
-import aston.project.mapper.impl.RoleDtoMapperImpl;
+import aston.project.servlet.mapper.impl.RoleDtoMapperImpl;
 import aston.project.repository.RoleRepository;
 import aston.project.repository.impl.RoleRepositoryImpl;
 

@@ -1,7 +1,7 @@
 package servlet;
 
-import aston.project.dto.PhoneNumberIncomingDto;
-import aston.project.dto.PhoneNumberUpdateDto;
+import aston.project.servlet.dto.PhoneNumberIncomingDto;
+import aston.project.servlet.dto.PhoneNumberUpdateDto;
 import aston.project.exception.NotFoundException;
 import aston.project.service.PhoneNumberService;
 import aston.project.service.impl.PhoneNumberServiceImpl;

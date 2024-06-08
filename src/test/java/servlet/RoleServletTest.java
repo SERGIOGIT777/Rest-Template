@@ -1,7 +1,7 @@
 package servlet;
 
-import aston.project.dto.RoleIncomingDto;
-import aston.project.dto.RoleUpdateDto;
+import aston.project.servlet.dto.RoleIncomingDto;
+import aston.project.servlet.dto.RoleUpdateDto;
 import aston.project.exception.NotFoundException;
 import aston.project.service.RoleService;
 import aston.project.service.impl.RoleServiceImpl;

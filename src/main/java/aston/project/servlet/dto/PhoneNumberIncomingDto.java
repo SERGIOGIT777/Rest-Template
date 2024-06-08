@@ -1,4 +1,4 @@
-package aston.project.dto;
+package aston.project.servlet.dto;
 
 public class PhoneNumberIncomingDto {
     private String number;

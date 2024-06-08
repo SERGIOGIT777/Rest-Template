@@ -1,12 +1,12 @@
-package aston.project.mapper.impl;
+package aston.project.servlet.mapper.impl;
 
-import aston.project.dto.UserIncomingDto;
-import aston.project.dto.UserOutGoingDto;
-import aston.project.dto.UserUpdateDto;
-import aston.project.mapper.DepartmentDtoMapper;
-import aston.project.mapper.PhoneNumberDtoMapper;
-import aston.project.mapper.RoleDtoMapper;
-import aston.project.mapper.UserDtoMapper;
+import aston.project.servlet.dto.UserIncomingDto;
+import aston.project.servlet.dto.UserOutGoingDto;
+import aston.project.servlet.dto.UserUpdateDto;
+import aston.project.servlet.mapper.DepartmentDtoMapper;
+import aston.project.servlet.mapper.PhoneNumberDtoMapper;
+import aston.project.servlet.mapper.RoleDtoMapper;
+import aston.project.servlet.mapper.UserDtoMapper;
 import aston.project.model.User;
 
 import java.util.List;

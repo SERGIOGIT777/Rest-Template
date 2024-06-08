@@ -1,8 +1,8 @@
-package aston.project.mapper;
+package aston.project.servlet.mapper;
 
-import aston.project.dto.DepartmentIncomingDto;
-import aston.project.dto.DepartmentOutGoingDto;
-import aston.project.dto.DepartmentUpdateDto;
+import aston.project.servlet.dto.DepartmentIncomingDto;
+import aston.project.servlet.dto.DepartmentOutGoingDto;
+import aston.project.servlet.dto.DepartmentUpdateDto;
 import aston.project.model.Department;
 
 import java.util.List;

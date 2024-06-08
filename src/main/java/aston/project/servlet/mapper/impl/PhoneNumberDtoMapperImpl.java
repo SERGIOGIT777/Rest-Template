@@ -1,10 +1,10 @@
-package aston.project.mapper.impl;
+package aston.project.servlet.mapper.impl;
 
-import aston.project.dto.PhoneNumberIncomingDto;
-import aston.project.dto.PhoneNumberOutGoingDto;
-import aston.project.dto.PhoneNumberUpdateDto;
-import aston.project.dto.UserSmallOutGoingDto;
-import aston.project.mapper.PhoneNumberDtoMapper;
+import aston.project.servlet.dto.PhoneNumberIncomingDto;
+import aston.project.servlet.dto.PhoneNumberOutGoingDto;
+import aston.project.servlet.dto.PhoneNumberUpdateDto;
+import aston.project.servlet.dto.UserSmallOutGoingDto;
+import aston.project.servlet.mapper.PhoneNumberDtoMapper;
 import aston.project.model.PhoneNumber;
 import aston.project.model.User;
 

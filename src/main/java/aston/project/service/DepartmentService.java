@@ -1,8 +1,8 @@
 package aston.project.service;
 
-import aston.project.dto.DepartmentIncomingDto;
-import aston.project.dto.DepartmentOutGoingDto;
-import aston.project.dto.DepartmentUpdateDto;
+import aston.project.servlet.dto.DepartmentIncomingDto;
+import aston.project.servlet.dto.DepartmentOutGoingDto;
+import aston.project.servlet.dto.DepartmentUpdateDto;
 import aston.project.exception.NotFoundException;
 
 import java.util.List;
