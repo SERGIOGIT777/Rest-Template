@@ -1,10 +1,10 @@
-package mapper.impl;
+package servlet.mapper.impl;
 
-import aston.project.dto.PhoneNumberIncomingDto;
-import aston.project.dto.PhoneNumberOutGoingDto;
-import aston.project.dto.PhoneNumberUpdateDto;
-import aston.project.mapper.PhoneNumberDtoMapper;
-import aston.project.mapper.impl.PhoneNumberDtoMapperImpl;
+import aston.project.servlet.dto.PhoneNumberIncomingDto;
+import aston.project.servlet.dto.PhoneNumberOutGoingDto;
+import aston.project.servlet.dto.PhoneNumberUpdateDto;
+import aston.project.servlet.mapper.PhoneNumberDtoMapper;
+import aston.project.servlet.mapper.impl.PhoneNumberDtoMapperImpl;
 import aston.project.model.PhoneNumber;
 import aston.project.model.User;
 import org.junit.jupiter.api.Assertions;

@@ -1,7 +1,7 @@
 package servlet;
 
-import aston.project.dto.UserIncomingDto;
-import aston.project.dto.UserUpdateDto;
+import aston.project.servlet.dto.UserIncomingDto;
+import aston.project.servlet.dto.UserUpdateDto;
 import aston.project.exception.NotFoundException;
 import aston.project.service.UserService;
 import aston.project.service.impl.UserServiceImpl;

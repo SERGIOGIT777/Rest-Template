@@ -1,8 +1,8 @@
 package aston.project.service;
 
-import aston.project.dto.UserIncomingDto;
-import aston.project.dto.UserOutGoingDto;
-import aston.project.dto.UserUpdateDto;
+import aston.project.servlet.dto.UserIncomingDto;
+import aston.project.servlet.dto.UserOutGoingDto;
+import aston.project.servlet.dto.UserUpdateDto;
 import aston.project.exception.NotFoundException;
 
 import java.util.List;

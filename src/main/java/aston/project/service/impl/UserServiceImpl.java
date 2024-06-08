@@ -1,13 +1,13 @@
 package aston.project.service.impl;
 
-import aston.project.dto.UserIncomingDto;
-import aston.project.dto.UserOutGoingDto;
-import aston.project.dto.UserUpdateDto;
-import aston.project.mapper.UserDtoMapper;
+import aston.project.servlet.dto.UserIncomingDto;
+import aston.project.servlet.dto.UserOutGoingDto;
+import aston.project.servlet.dto.UserUpdateDto;
+import aston.project.servlet.mapper.UserDtoMapper;
 import aston.project.model.User;
 import aston.project.service.UserService;
 import aston.project.exception.NotFoundException;
-import aston.project.mapper.impl.UserDtoMapperImpl;
+import aston.project.servlet.mapper.impl.UserDtoMapperImpl;
 import aston.project.repository.UserRepository;
 import aston.project.repository.impl.UserRepositoryImpl;
 

@@ -1,8 +1,8 @@
 package aston.project.servlet;
 
-import aston.project.dto.RoleIncomingDto;
-import aston.project.dto.RoleOutGoingDto;
-import aston.project.dto.RoleUpdateDto;
+import aston.project.servlet.dto.RoleIncomingDto;
+import aston.project.servlet.dto.RoleOutGoingDto;
+import aston.project.servlet.dto.RoleUpdateDto;
 import aston.project.service.RoleService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import aston.project.exception.NotFoundException;

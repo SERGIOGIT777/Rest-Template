@@ -1,10 +1,10 @@
-package mapper.impl;
+package servlet.mapper.impl;
 
-import aston.project.dto.DepartmentIncomingDto;
-import aston.project.dto.DepartmentOutGoingDto;
-import aston.project.dto.DepartmentUpdateDto;
-import aston.project.mapper.DepartmentDtoMapper;
-import aston.project.mapper.impl.DepartmentDtoMapperImpl;
+import aston.project.servlet.dto.DepartmentIncomingDto;
+import aston.project.servlet.dto.DepartmentOutGoingDto;
+import aston.project.servlet.dto.DepartmentUpdateDto;
+import aston.project.servlet.mapper.DepartmentDtoMapper;
+import aston.project.servlet.mapper.impl.DepartmentDtoMapperImpl;
 import aston.project.model.Department;
 import aston.project.model.User;
 import org.junit.jupiter.api.Assertions;

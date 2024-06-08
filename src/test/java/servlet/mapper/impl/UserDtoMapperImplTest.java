@@ -1,12 +1,13 @@
-package mapper.impl;
+package servlet.mapper.impl;
 
 import aston.project.dto.*;
-import aston.project.mapper.UserDtoMapper;
-import aston.project.mapper.impl.UserDtoMapperImpl;
+import aston.project.servlet.mapper.UserDtoMapper;
+import aston.project.servlet.mapper.impl.UserDtoMapperImpl;
 import aston.project.model.Department;
 import aston.project.model.PhoneNumber;
 import aston.project.model.Role;
 import aston.project.model.User;
+import aston.project.servlet.dto.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

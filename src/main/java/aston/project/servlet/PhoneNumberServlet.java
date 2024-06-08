@@ -1,8 +1,8 @@
 package aston.project.servlet;
 
-import aston.project.dto.PhoneNumberIncomingDto;
-import aston.project.dto.PhoneNumberOutGoingDto;
-import aston.project.dto.PhoneNumberUpdateDto;
+import aston.project.servlet.dto.PhoneNumberIncomingDto;
+import aston.project.servlet.dto.PhoneNumberOutGoingDto;
+import aston.project.servlet.dto.PhoneNumberUpdateDto;
 import aston.project.service.PhoneNumberService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import aston.project.exception.NotFoundException;

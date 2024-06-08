@@ -1,8 +1,8 @@
 package aston.project.service;
 
-import aston.project.dto.RoleIncomingDto;
-import aston.project.dto.RoleOutGoingDto;
-import aston.project.dto.RoleUpdateDto;
+import aston.project.servlet.dto.RoleIncomingDto;
+import aston.project.servlet.dto.RoleOutGoingDto;
+import aston.project.servlet.dto.RoleUpdateDto;
 import aston.project.exception.NotFoundException;
 
 import java.util.List;

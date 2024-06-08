@@ -1,8 +1,8 @@
 package aston.project.servlet;
 
-import aston.project.dto.UserIncomingDto;
-import aston.project.dto.UserOutGoingDto;
-import aston.project.dto.UserUpdateDto;
+import aston.project.servlet.dto.UserIncomingDto;
+import aston.project.servlet.dto.UserOutGoingDto;
+import aston.project.servlet.dto.UserUpdateDto;
 import aston.project.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import aston.project.exception.NotFoundException;

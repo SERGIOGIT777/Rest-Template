@@ -1,8 +1,8 @@
-package aston.project.mapper;
+package aston.project.servlet.mapper;
 
-import aston.project.dto.PhoneNumberOutGoingDto;
-import aston.project.dto.PhoneNumberUpdateDto;
-import aston.project.dto.PhoneNumberIncomingDto;
+import aston.project.servlet.dto.PhoneNumberOutGoingDto;
+import aston.project.servlet.dto.PhoneNumberUpdateDto;
+import aston.project.servlet.dto.PhoneNumberIncomingDto;
 import aston.project.model.PhoneNumber;
 
 import java.util.List;

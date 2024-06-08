@@ -1,8 +1,8 @@
-package aston.project.mapper;
+package aston.project.servlet.mapper;
 
-import aston.project.dto.RoleIncomingDto;
-import aston.project.dto.RoleOutGoingDto;
-import aston.project.dto.RoleUpdateDto;
+import aston.project.servlet.dto.RoleIncomingDto;
+import aston.project.servlet.dto.RoleOutGoingDto;
+import aston.project.servlet.dto.RoleUpdateDto;
 import aston.project.model.Role;
 
 import java.util.List;
