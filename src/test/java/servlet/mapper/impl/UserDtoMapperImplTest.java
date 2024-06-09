@@ -1,6 +1,6 @@
 package servlet.mapper.impl;
 
-import aston.project.dto.*;
+
 import aston.project.servlet.mapper.UserDtoMapper;
 import aston.project.servlet.mapper.impl.UserDtoMapperImpl;
 import aston.project.model.Department;
