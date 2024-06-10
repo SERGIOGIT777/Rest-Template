@@ -45,7 +45,4 @@ public class Department {
         return userList;
     }
 
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
-    }
 }

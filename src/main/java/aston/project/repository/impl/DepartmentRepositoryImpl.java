@@ -151,10 +151,6 @@ public class DepartmentRepositoryImpl implements DepartmentRepository {
         return roleList;
     }
 
-    @Override
-    public boolean existsById(Long id) {
-        return false;
-    }
 
     @Override
     public boolean exitsById(Long id) {

@@ -10,8 +10,6 @@ public class UserToDepartment {
     private Long userId;
     private Long departmentId;
 
-    public UserToDepartment() {
-    }
 
     public UserToDepartment(Long id, Long userId, Long departmentId) {
         this.id = id;
