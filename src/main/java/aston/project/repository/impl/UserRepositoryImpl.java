@@ -293,11 +293,6 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public boolean existsById(Long id) {
-        return false;
-    }
-
-    @Override
     public boolean exitsById(Long id) {
         boolean isExists = false;
         try (Connection connection = connectionManager.getConnection();

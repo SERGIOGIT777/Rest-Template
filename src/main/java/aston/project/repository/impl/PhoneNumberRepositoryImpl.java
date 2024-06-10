@@ -242,10 +242,6 @@ public class PhoneNumberRepositoryImpl implements PhoneNumberRepository {
         return phoneNumberList;
     }
 
-    @Override
-    public boolean existsById(Long id) {
-        return false;
-    }
 
     @Override
     public boolean exitsById(Long id) {
