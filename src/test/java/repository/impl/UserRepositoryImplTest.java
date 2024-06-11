@@ -6,6 +6,10 @@ import aston.project.model.Role;
 import aston.project.model.User;
 import aston.project.repository.UserRepository;
 import aston.project.repository.impl.UserRepositoryImpl;
+import com.github.dockerjava.api.model.ExposedPort;
+import com.github.dockerjava.api.model.HostConfig;
+import com.github.dockerjava.api.model.PortBinding;
+import com.github.dockerjava.api.model.Ports;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -23,12 +27,16 @@ import java.util.Optional;
 class UserRepositoryImplTest {
     private static final String INIT_SQL = "sql/schema.sql";
     private static final int containerPort = 5432;
+    private static int localPort = 5432;
     @Container
     public static PostgreSQLContainer<?> container = new PostgreSQLContainer<>("postgres:15-alpine")
             .withDatabaseName("users_db")
             .withUsername(PropertiesUtil.getProperty("db.username"))
             .withPassword(PropertiesUtil.getProperty("db.password"))
             .withExposedPorts(containerPort)
+            .withCreateContainerCmdModifier(cmd -> cmd.withHostConfig(
+                    new HostConfig().withPortBindings(new PortBinding(Ports.Binding.bindPort(localPort), new ExposedPort(containerPort)))
+            ))
             .withInitScript(INIT_SQL);
     public static UserRepository userRepository;
     private static JdbcDatabaseDelegate jdbcDatabaseDelegate;

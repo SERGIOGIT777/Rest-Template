@@ -150,4 +150,23 @@ public class DepartmentRepositoryImpl implements DepartmentRepository {
         }
         return roleList;
     }
+
+
+    @Override
+    public boolean exitsById(Long id) {
+        boolean isExists = false;
+        try (Connection connection = connectionManager.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(EXIST_BY_ID_SQL)) {
+
+            preparedStatement.setLong(1, id);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                isExists = resultSet.getBoolean(1);
+            }
+        } catch (SQLException e) {
+            throw new RepositoryException(e);
+        }
+        return isExists;
+    }
 }
