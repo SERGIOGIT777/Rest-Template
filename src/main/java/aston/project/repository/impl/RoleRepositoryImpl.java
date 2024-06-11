@@ -146,7 +146,6 @@ public class RoleRepositoryImpl implements RoleRepository {
         return roleList;
     }
 
-    @Override
     public boolean exitsById(Long id) {
         boolean isExists = false;
         try (Connection connection = connectionManager.getConnection();

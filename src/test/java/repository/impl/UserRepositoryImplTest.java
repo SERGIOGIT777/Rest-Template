@@ -23,7 +23,6 @@ import java.util.Optional;
 class UserRepositoryImplTest {
     private static final String INIT_SQL = "sql/schema.sql";
     private static final int containerPort = 5432;
-    private static final int localPort = 5432;
     @Container
     public static PostgreSQLContainer<?> container = new PostgreSQLContainer<>("postgres:15-alpine")
             .withDatabaseName("users_db")
@@ -179,18 +178,5 @@ class UserRepositoryImplTest {
         int resultSize = userRepository.findAll().size();
 
         Assertions.assertEquals(expectedSize, resultSize);
-    }
-
-    @DisplayName("Exist by ID")
-    @ParameterizedTest
-    @CsvSource(value = {
-            "1; true",
-            "4; true",
-            "100; false"
-    }, delimiter = ';')
-    void exitsById(Long roleId, Boolean expectedValue) {
-        boolean isUserExist = userRepository.exitsById(roleId);
-
-        Assertions.assertEquals(expectedValue, isUserExist);
     }
 }

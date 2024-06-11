@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface PhoneNumberRepository extends Repository<PhoneNumber, Long> {
-    boolean exitsById(Long id);
 
     List<PhoneNumber> findAllByUserId(Long userId);
 

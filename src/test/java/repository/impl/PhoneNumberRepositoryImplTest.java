@@ -159,19 +159,6 @@ class PhoneNumberRepositoryImplTest {
         Assertions.assertEquals(expectedSize, resultSize);
     }
 
-    @DisplayName("Exist by ID")
-    @ParameterizedTest
-    @CsvSource(value = {
-            "1, true",
-            "4, true",
-            "1000, false"
-    })
-    void exitsById(Long expectedId, Boolean expectedValue) {
-        Boolean resultValue = phoneNumberRepository.exitsById(expectedId);
-
-        Assertions.assertEquals(expectedValue, resultValue);
-    }
-
     @DisplayName("Find by UserId")
     @ParameterizedTest
     @CsvSource(value = {

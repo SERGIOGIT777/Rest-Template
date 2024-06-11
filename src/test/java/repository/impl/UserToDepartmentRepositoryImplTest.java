@@ -20,7 +20,6 @@ class UserToDepartmentRepositoryImplTest {
     private static final String INIT_SQL = "sql/schema.sql";
     public static UserToDepartmentRepository userToDepartmentRepository;
     private static int containerPort = 5432;
-    private static int localPort = 5432;
     @Container
     public static PostgreSQLContainer<?> container = new PostgreSQLContainer<>("postgres:15-alpine")
             .withDatabaseName("users_db")
@@ -168,19 +167,6 @@ class UserToDepartmentRepositoryImplTest {
         int resultSize = userToDepartmentRepository.findAll().size();
 
         Assertions.assertEquals(expectedSize, resultSize);
-    }
-
-    @DisplayName("Exist by Id.")
-    @ParameterizedTest
-    @CsvSource(value = {
-            "1, true",
-            "3, true",
-            "1000, false"
-    })
-    void exitsById(Long expectedId, Boolean expectedValue) {
-        Boolean resultValue = userToDepartmentRepository.exitsById(expectedId);
-
-        Assertions.assertEquals(expectedValue, resultValue);
     }
 
     @DisplayName("Find by user Id.")
