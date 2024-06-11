@@ -3,6 +3,10 @@ package repository.impl;
 import aston.project.model.UserToDepartment;
 import aston.project.repository.UserToDepartmentRepository;
 import aston.project.repository.impl.UserToDepartmentRepositoryImpl;
+import com.github.dockerjava.api.model.ExposedPort;
+import com.github.dockerjava.api.model.HostConfig;
+import com.github.dockerjava.api.model.PortBinding;
+import com.github.dockerjava.api.model.Ports;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -27,6 +31,9 @@ class UserToDepartmentRepositoryImplTest {
             .withUsername(PropertiesUtil.getProperty("db.username"))
             .withPassword(PropertiesUtil.getProperty("db.password"))
             .withExposedPorts(containerPort)
+            .withCreateContainerCmdModifier(cmd -> cmd.withHostConfig(
+                    new HostConfig().withPortBindings(new PortBinding(Ports.Binding.bindPort(localPort), new ExposedPort(containerPort)))
+            ))
             .withInitScript(INIT_SQL);
     private static JdbcDatabaseDelegate jdbcDatabaseDelegate;
 
@@ -168,19 +175,6 @@ class UserToDepartmentRepositoryImplTest {
         int resultSize = userToDepartmentRepository.findAll().size();
 
         Assertions.assertEquals(expectedSize, resultSize);
-    }
-
-    @DisplayName("Exist by Id.")
-    @ParameterizedTest
-    @CsvSource(value = {
-            "1, true",
-            "3, true",
-            "1000, false"
-    })
-    void exitsById(Long expectedId, Boolean expectedValue) {
-        Boolean resultValue = userToDepartmentRepository.exitsById(expectedId);
-
-        Assertions.assertEquals(expectedValue, resultValue);
     }
 
     @DisplayName("Find by user Id.")

@@ -213,24 +213,6 @@ public class UserToDepartmentRepositoryImpl implements UserToDepartmentRepositor
         return userToDepartmentList;
     }
 
-    @Override
-    public boolean exitsById(Long id) {
-        boolean isExists = false;
-        try (Connection connection = connectionManager.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(EXIST_BY_ID_SQL)) {
-
-            preparedStatement.setLong(1, id);
-
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                isExists = resultSet.getBoolean(1);
-            }
-        } catch (SQLException e) {
-            throw new RepositoryException(e);
-        }
-        return isExists;
-    }
-
     public List<UserToDepartment> findAllByUserId(Long userId) {
         List<UserToDepartment> userToDepartmentList = new ArrayList<>();
         try (Connection connection = connectionManager.getConnection();

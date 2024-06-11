@@ -292,24 +292,6 @@ public class UserRepositoryImpl implements UserRepository {
         return userList;
     }
 
-    @Override
-    public boolean exitsById(Long id) {
-        boolean isExists = false;
-        try (Connection connection = connectionManager.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(EXIST_BY_ID_SQL)) {
-
-            preparedStatement.setLong(1, id);
-
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                isExists = resultSet.getBoolean(1);
-            }
-        } catch (SQLException e) {
-            throw new RepositoryException(e);
-        }
-        return isExists;
-    }
-
     private User createUser(ResultSet resultSet) throws SQLException {
         Long userId = resultSet.getLong("user_id");
         Role role = roleRepository.findById(resultSet.getLong("role_id")).orElse(null);

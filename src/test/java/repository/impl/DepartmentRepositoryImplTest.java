@@ -3,6 +3,10 @@ package repository.impl;
 import aston.project.model.Department;
 import aston.project.repository.DepartmentRepository;
 import aston.project.repository.impl.DepartmentRepositoryImpl;
+import com.github.dockerjava.api.model.ExposedPort;
+import com.github.dockerjava.api.model.HostConfig;
+import com.github.dockerjava.api.model.PortBinding;
+import com.github.dockerjava.api.model.Ports;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -21,12 +25,16 @@ class DepartmentRepositoryImplTest {
     private static final String INIT_SQL = "sql/schema.sql";
     public static DepartmentRepository departmentRepository;
     private static int containerPort = 5432;
+    private static int localPort = 5432;
     @Container
     public static PostgreSQLContainer<?> container = new PostgreSQLContainer<>("postgres:15-alpine")
             .withDatabaseName("users_db")
             .withUsername(PropertiesUtil.getProperty("db.username"))
             .withPassword(PropertiesUtil.getProperty("db.password"))
             .withExposedPorts(containerPort)
+            .withCreateContainerCmdModifier(cmd -> cmd.withHostConfig(
+                    new HostConfig().withPortBindings(new PortBinding(Ports.Binding.bindPort(localPort), new ExposedPort(containerPort)))
+            ))
             .withInitScript(INIT_SQL);
     private static JdbcDatabaseDelegate jdbcDatabaseDelegate;
 
@@ -122,18 +130,5 @@ class DepartmentRepositoryImplTest {
         int resultSize = departmentRepository.findAll().size();
 
         Assertions.assertEquals(expectedSize, resultSize);
-    }
-
-    @DisplayName("Exist by ID")
-    @ParameterizedTest
-    @CsvSource(value = {
-            "1; true",
-            "4; true",
-            "100; false"
-    }, delimiter = ';')
-    void exitsById(Long departmentId, Boolean expectedValue) {
-        boolean isRoleExist = departmentRepository.exitsById(departmentId);
-
-        Assertions.assertEquals(expectedValue, isRoleExist);
     }
 }

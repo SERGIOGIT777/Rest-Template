@@ -12,8 +12,6 @@ public interface UserToDepartmentRepository extends Repository<UserToDepartment,
 
     boolean deleteByDepartmentId(Long departmentId);
 
-    boolean exitsById(Long id);
-
     List<UserToDepartment> findAllByUserId(Long userId);
 
     List<Department> findDepartmentsByUserId(Long userId);
